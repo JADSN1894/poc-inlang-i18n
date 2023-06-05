@@ -1,0 +1,36 @@
+{
+	"name": "poc-inlang-i18n",
+	// "containerUser": "node",
+	"remoteUser": "node",
+	"updateRemoteUserUID": true,
+	"build": {
+		"context": ".",
+		"dockerfile": "Dockerfile"
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"editor.fontWeight": "bold",
+				"editor.formatOnSave": true,
+				"explorer.compactFolders": false,
+				"css.lint.unknownAtRules": "ignore",
+				"terminal.integrated.env.linux": {
+					"EDITOR": "code"
+				}
+			},
+			"extensions": [
+				"svelte.svelte-vscode",
+				"bradlc.vscode-tailwindcss",
+				"usernamehw.errorlens",
+				"sclu1034.justfile",
+				"yzhang.markdown-all-in-one",
+				"tamasfe.even-better-toml",
+				"aaron-bond.better-comments",
+				"yoavbls.pretty-ts-errors",
+				"vunguyentuan.vscode-postcss",
+				"henrikvilhelmberglund.vscode-svelte-snippets-henrikvilhelmberglund",
+				"inlang.vs-code-extension"
+			]
+		}
+	}
+}

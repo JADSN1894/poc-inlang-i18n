@@ -1,0 +1,20 @@
+# List possible commands
+list:
+    just --list
+
+# Reset setup
+reset-setup: remove-vscode remove-containers
+    echo "Reset setup done"
+
+# Refresh install vscode
+remove-vscode:
+    rm -rfv $HOME/.vscode $HOME/.config/Code
+    sudo apt-get autoremove --purge code -y
+    sudo apt-get install code -y
+    code --install-extension ms-vscode-remote.remote-containers
+
+# Cleanup docker
+remove-containers:
+    docker system prune --force
+    docker image ls | awk '/^vsc/{print $3}' | xargs docker rmi --force
+    docker volume rm vscode
