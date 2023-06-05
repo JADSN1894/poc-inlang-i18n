@@ -14,3 +14,4 @@ just dev
 
 ```bash
 just prod
+```
